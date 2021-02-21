@@ -62,6 +62,7 @@ export let setCokie = (value) => {
     let date = new Date;
     date.setTime(date.getDate() + 30);
     document.cookie = `filter=${value}; expires=${date}`;
+    console.log(document.cookie);
 };
 
 // creating select-option field
