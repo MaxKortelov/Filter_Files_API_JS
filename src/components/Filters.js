@@ -1,5 +1,5 @@
 import {appendDiv, renderfiltereFiles, appendSelect, 
-        switchFilter, getCokie} from './renderingFunctions';
+        switchFilter, getStorage} from './helpFunctions';
 
 export let creatingFilters = (files) => {
     // render filter panel
@@ -7,10 +7,10 @@ export let creatingFilters = (files) => {
     let append = [
         appendDiv('filter-panel-text', '', '', 'Сортировка файлов: '),
         appendSelect(filters, files)
-    ]
+    ];
     document.querySelector('body').prepend(appendDiv('filter-panel', append, ''));
 
     //render files
     renderfiltereFiles(files);
-    switchFilter('По имени', files);
+    switchFilter(getStorage() ? getStorage() : 'По имени', files);
 }

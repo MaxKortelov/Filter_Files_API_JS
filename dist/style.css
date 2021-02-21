@@ -64,3 +64,14 @@ body {
     margin-right: 2vw;
     color: white;
 }
+
+.active {
+    position: relative;
+    background-color: rgb(68 56 249 / 85%);
+    border-radius: 8px;
+}
+
+.active > div {
+    min-height: max-content;
+    max-height: max-content;
+}
