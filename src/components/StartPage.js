@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {appendDiv, appendImg} from './helpFunctions';
+import {appendDiv, appendImg, onClickFile} from './helpFunctions';
 import { creatingFilters } from './Filters';
 
 let main = document.querySelector('#main');
@@ -9,6 +9,9 @@ function clickEvent(e) {
     // fetch folders
     axios.post('http://fs.mh.net.ua/ajax/lsjson.php?dir=global/video&idu=1')
     .then(res => {
+        main.style.height = '95vh';
+        main.addEventListener('click', onClickFile);
+
         // Filter files and creating files
         creatingFilters(res.data);
     })

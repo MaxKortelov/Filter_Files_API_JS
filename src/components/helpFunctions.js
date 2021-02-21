@@ -89,9 +89,8 @@ export let appendSelect = (options, files) => {
 };
 
 // detailed info file
-let onClickFile = (e) => {
+export let onClickFile = (e) => {
     let files = document.querySelectorAll('.main__start');
-    console.log(files);
     files.forEach(file => file.classList.remove('active'));
-    e.target.closest('.main__start').classList.add('active');
+    if(!e.target.id) e.target.closest('.main__start').classList.add('active');
 }

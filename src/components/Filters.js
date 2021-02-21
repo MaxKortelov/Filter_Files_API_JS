@@ -9,7 +9,6 @@ export let creatingFilters = (files) => {
         appendSelect(filters, files)
     ];
     document.querySelector('body').prepend(appendDiv('filter-panel', append, ''));
-
     //render files
     renderfiltereFiles(files);
     switchFilter(getStorage() ? getStorage() : 'По имени', files);

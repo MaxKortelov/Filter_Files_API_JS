@@ -1,7 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
-    background: no-repeat 100% url('./images/windows.jpg');
+    background: no-repeat url('./images/windows.jpg');
+    background-size: cover;
     margin: 0;
     overflow: hidden;
 }
@@ -9,9 +10,9 @@ body {
 #main {
     display: grid;
     width: 100vw;
-    height: 95vh;
-    grid-template-columns: repeat(auto-fill, 100px);
-    grid-template-rows: repeat(auto-fill, 100px);
+    height: 100vh;
+    grid-template-columns: repeat(auto-fill, 89px);
+    grid-template-rows: repeat(auto-fill, 105px);
     overflow-y: scroll;
 }
 
