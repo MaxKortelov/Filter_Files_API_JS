@@ -20,7 +20,7 @@ function clickEvent(e) {
 
 function createStartPage() {
     let append = [
-        appendImg(50, './images/folder.svg') , 
+        appendImg(50, './images/folder.svg'),
         appendDiv('textStyle', '', '', 'Click Me')
     ];
     appendDiv('main__start medium-font', append, main, '', clickEvent);
